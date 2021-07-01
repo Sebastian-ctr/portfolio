@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block tittle%}
+Michał Kazimierczuk
+{% endblock %}
+
+{% block content %}
+<div>
+    <!--main home container-->
+    <div>
+        <!--home img div-->
+        <aside>
+            <button>l</button>
+            <img src="{% static 'portfolio/photo.jpg' %}" alt="My image" class='image-home'>
+            <button>r</button>
+        </aside>
+    </div>    
+</div>
+{% endblock content %}
