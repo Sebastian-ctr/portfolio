@@ -43,3 +43,10 @@ def films(request):
         'films':  films,
     }
     return render(request, 'films.html', context)
+
+def films_detail(request, id):
+    film = get_object_or_404(Film, id=id)
+    context = {
+        'film':film
+    }
+    return render(request, 'films_detail.html', context)
