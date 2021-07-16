@@ -7,12 +7,13 @@ Films
 
 {% block content %}
 <div>
-        <iframe width="560" height="315"
-            src="https://www.youtube.com/embed/{{ film.url }}" 
-            title="YouTube video player" 
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe><br>
-        <p>{{ film.tittle }}</p>
+    <iframe class="films-detail" width="800" height="450"
+        src="https://www.youtube.com/embed/{{ film.url }}" 
+        title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe><br>
+    <p class="films-tittle">{{ film.tittle }}</p>
+    <!--width="560" height="315"-->
 </div>
 {% endblock content %}

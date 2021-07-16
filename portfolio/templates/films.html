@@ -6,10 +6,11 @@ Films
 {% endblock %}
 
 {% block content %}
-<div>
+<div class="films">
     {% for film in films  %}
         <a href="{% url 'films_detail' id=film.id %}">
-        <img src="http://img.youtube.com/vi/{{ film.url }}/[1].jpg."><br>
+        <img class="film-img" src="http://img.youtube.com/vi/{{ film.url }}/[10].jpg."
+        class="yt-image"><br>
         <p>{{ film.tittle }}</p>
         </a>
     {% endfor %}

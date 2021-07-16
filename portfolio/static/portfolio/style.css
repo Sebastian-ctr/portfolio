@@ -130,6 +130,32 @@ footer{
 .photo-description{
    width: 700px;
 }
+/* films */
+
+.films{
+  display: grid;
+  grid-template-columns: 500px 500px;
+  grid-gap: 40px;
+  justify-content: center;
+  padding-top: 60px;
+}
+.yt-image{
+  width: 500px;
+}
+/* films detail */
+.films-detail, .films-tittle{
+  display: flex;
+  padding: 20px;
+  margin: auto;
+  justify-content: center;
+}
+.films-detail{
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+
+
 
 /* modal images*/
 
@@ -237,7 +263,7 @@ footer{
 
 
 /* mobile version  */
-@media (max-width:750px){
+@media (max-width:767px){
     .base{
         padding:0%;
     }
@@ -267,6 +293,16 @@ footer{
         width: 50%;
         margin: auto;
         justify-items: center;
+    }
+
+    .films{
+      display: block;
+    }
+    .film-img{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      
     }
     footer{
         width: 50%;
