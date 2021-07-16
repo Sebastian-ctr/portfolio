@@ -124,3 +124,6 @@ STATICFILES_DIRS = [
     #'/var/www/static/',
 ]
 
+MEDIA_ROOT = BASE_DIR/'media_cdn'
+MEDIA_URL = '/media_cdn/'
+

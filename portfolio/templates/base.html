@@ -10,24 +10,31 @@
         {% block tittle%}
         {% endblock %}
     </title>
+    <link rel="icon" href="{% static 'portfolio/mk.jpg' %}" type="image/icon type">
+    <script
+        src="{% static 'portfolio/main.js' %}"> 
+    </script>
 </head>
 <body>
-    <div>
-            <nav>
-                <div>
-                    <a href="{% url 'films' %}">films</a>
-                </div>
-                <div>
-                    <a href="{% url 'press' %}">press</a>
-                </div>
-                <div>
-                    <a href="{% url 'about' %}">about</a>
-                </div>
-                <div>
-                    <a href="{% url 'contact' %}">contact</a>
-                </div>
-            </nav>
-
+    <div class="base">
+    <!--side bar container--> 
+            <div id="mySidenav" class="sidenav">
+                
+                <a href="{% url 'home' %}" class="author">Michał Kazimierczuk</a>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+               
+                <a href="{% url 'photos' %}" class="photos-link">Photos</a>
+                <a href="{% url 'films' %}" class="films-link">Films</a>
+                <a hrf="#" class="music-link">Music</a>
+                
+                <a href="{% url 'press' %}" class="texts-link">Texts</a> 
+                <a href="#" class="publications-link">Publications</a>
+                <a href="{% url 'about' %}" class="about-link">About</a>
+                <a href="{% url 'contact' %}" class="contact-link">Contact</a>
+                
+                
+            </div>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()" id='icon'>&#9776;</span>
         {% block content %}
         {% endblock %}
     </div>

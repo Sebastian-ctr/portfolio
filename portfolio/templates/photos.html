@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block tittle%}
+Photos
+{% endblock %}
+
+{% block content %}
+<div>
+    <div class="photos-container">
+        <!--main film container-->
+    
+        {% for album in album %}
+        <aside>
+        <a href="{% url 'album_details' id=album.id %}">
+            <img src="{{ album.image.url }}" class='image-photos'>
+            </a><br>
+            {{ album.tittle }}
+        </aside>
+        {% endfor %}
+        
+    </div>
+    <footer>
+    <p> author : xxx</p>
+    </footer>
+</div>
+{% endblock content %}

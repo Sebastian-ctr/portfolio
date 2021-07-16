@@ -1,7 +1,274 @@
-.image-home{
+.base{
+    padding: 20px;
+}
+
+
+
+.image-home, .image-about{
     height: 100%;
     max-height: 600px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.image-about{
+    max-height: 600px;
+    float: right;
+    margin-left: 25px;
+}
+
+.image-photos{
+    width: 100%;
+    max-width: 300px;
+}
+
+.photos-container{
+    width: 100%;
+    display:grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-gap: 50px;
+    padding-top: 50px;
+    justify-content: center;
+    
+}
+
+footer{
+    margin: auto;
+    width: 400px;
+}
+
+
+/*Navigation bar*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #3a3939;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #b6aeaeda;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    font-size: 39px;
+    margin-left: 0px; /*margin-left: 50px*/
+  }/*right: 25px;*/
+
+ .author{
+      position: absolute;
+      top: 10px;
+      left: 35px;
+  }
+
+  
+  
+
+  
+  
+
+
+
+.about-container{
+    margin: 30px;
+}
+
+.about-text{
+    width: 1000px;
+    margin: auto;
+    padding-top: 40px;
+}
+/* album details*/
+
+
+.album-tittle{
+    width: 50%;
+    margin: auto;
+}
+
+
+.album-descriptions{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.album-img{
+    width: 100%;
+    max-width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.album-photos{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-gap: 10px;
+    padding-right: 20px;
+    /*float: left;*/
+}
+
+.photo-description{
+   width: 700px;
+}
+
+/* modal images*/
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation */
+  .modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+/*lightbox for album detail*/  
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+
+/* mobile version  */
+@media (max-width:750px){
+    .base{
+        padding:0%;
+    }
+
+    .image-home{
+        max-height: 400px;
+        margin-top: 20px;
+    }
+
+    .image-about{
+        float: none;
+        max-height: 300px;
+        padding-bottom: 15px;
+    }
+
+    .about-container{
+        margin: 0%;
+        display: flex;
+    }
+
+    .about-text{
+        width: auto;
+        padding: 10px;
+    }
+    .photos-container{
+        grid-template-columns: 1fr;
+        width: 50%;
+        margin: auto;
+        justify-items: center;
+    }
+    footer{
+        width: 50%;
+    }
 }

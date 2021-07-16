@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block tittle%}
+Photos
+{% endblock %}
+
+{% block content %}
+<div class="album-tittle">
+        <h2>{{ photo.tittle}}</h2><br>
+</div>
+<div class="album-descriptions">
+<!--main photos container-->
+    <div>
+        <aside class="album-photos">
+            <img src="{{ photo.image.url }}" class="album-img" onclick="currentSlide(0)">
+            {% for p in photos  %}
+            <img src="{{ p.images.url }}" class="album-img" onclick="currentSlide({{ p.id }})">
+            {% endfor %}
+        </aside>
+        <div class="photo-description">
+            <p>{{ photo.description }}</p>
+        </div>
+    </div>
+</div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <div class="mySlides">
+  <img class="modal-content" id="img01">
+  <div>
+  <div id="caption"></div>
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+{% endblock content %}
