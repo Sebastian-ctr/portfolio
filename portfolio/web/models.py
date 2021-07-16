@@ -25,5 +25,13 @@ class PhotoImage(models.Model):
     photo = models.ForeignKey(Photo, default=None, on_delete=models.CASCADE)
     images = models.FileField(upload_to='media_cdn')
 
+
+class Film(models.Model):
+    url = models.CharField(max_length=200)
+    tittle = models.TextField()
+
+    def __str__(self):
+        return self.tittle
+
     
     

@@ -6,5 +6,10 @@ Films
 {% endblock %}
 
 {% block content %}
-
+<div>
+    {% for film in films  %}
+        <img src="http://img.youtube.com/vi/{{ film.url }}/[1].jpg."><br>
+        <p>{{ film.tittle }}</p>
+    {% endfor %}
+</div>
 {% endblock content %}

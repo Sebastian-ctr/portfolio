@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Photo, PhotoImage, Home_photo
+from .models import Photo, PhotoImage, Home_photo, Film
 
 class PhotoImageAdmin(admin.StackedInline):
     model = PhotoImage
@@ -20,3 +20,4 @@ class PhotoImageAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(Home_photo)
+admin.site.register(Film)

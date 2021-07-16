@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Photo, PhotoImage, Home_photo
+from .models import Photo, PhotoImage, Home_photo, Film
 
 # Create your views here.
 def home(request):
@@ -38,4 +38,8 @@ def photos_detail(request, id):
     return render(request,'photos_detail.html', context)
 
 def films(request):
-    return render(request, 'films.html')
+    films = Film.objects.all()
+    context = {
+        'films':  films,
+    }
+    return render(request, 'films.html', context)
