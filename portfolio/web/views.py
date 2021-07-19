@@ -7,7 +7,7 @@ def home(request):
     context = {
         'photo':photo,
     }
-    return render(request, 'home.html')
+    return render(request, 'home.html', context)
 
 
 def photos(request):

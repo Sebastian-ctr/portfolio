@@ -9,13 +9,11 @@ Michał Kazimierczuk
 <div>
     <!--main home container-->
     <div>
-        <!--home img div-->
-        <aside>
-            
-            <img id="home-img" src="{% static 'portfolio/photo.jpg' %}" alt="My image" class='image-home'>
-            <button onclick="next()">&#8702;</button>
-            
-        </aside>
+        <!--home img div-->   
+        {% for photo in photo %}
+             <img src="{{ photo.image.url }}" alt="My image" class='image-home'/><br>
+             <!--<i><h4>{{ photo.tittle }}</h4></i>-->
+        {% endfor %}
     </div>    
 </div>
 {% endblock content %}
