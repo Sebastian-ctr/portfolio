@@ -12,7 +12,7 @@ Michał Kazimierczuk
         <!--home img div-->   
         {% for photo in photo %}
              <img src="{{ photo.image.url }}" alt="My image" class='image-home'/><br>
-             <!--<i><h4>{{ photo.tittle }}</h4></i>-->
+             <i><h4 class="image-home-tittle">{{ photo.tittle }}</h4></i>
         {% endfor %}
     </div>    
 </div>

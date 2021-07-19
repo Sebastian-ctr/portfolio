@@ -23,6 +23,23 @@ function carousel(){
   x[myIndex-1].style.display = "block";
   setTimeout(carousel,5000);
 }
+  /* tittle for photo*/
+
+var myIndexTittle = 0;
+carouselTittle();
+
+function carouselTittle(){
+  var i;
+  var z = document.getElementsByClassName("image-home-tittle");
+  for (i = 0 ; i < z.length; i++){
+    z[i].style.display = "none";
+  }
+
+  myIndexTittle++;
+  if (myIndexTittle > z.length){myIndexTittle = 1}
+  z[myIndexTittle-1].style.display = "block";
+  setTimeout(carouselTittle, 5000);
+}
 
 
 //modal galeryy
@@ -49,6 +66,7 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function() { 
   modal.style.display = "none";
 }
+//end window onload function
 }
 //slideshow for album detail
 var slideIndex = 1;

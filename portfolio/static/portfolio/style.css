@@ -11,12 +11,22 @@
     margin-left: auto;
     margin-right: auto;
 }
+.image-home{
+  margin-top: 20px;
+}
 
 .image-about{
     max-height: 600px;
     display: block;
     float: right;
     margin-left: 25px;
+}
+
+.image-home-tittle{
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 35%;
 }
 
 .image-photos{
