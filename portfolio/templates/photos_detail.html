@@ -16,6 +16,7 @@ Photos
             <img src="{{ photo.image.url }}" class="album-img" onclick="currentSlide(0)">
             {% for p in photos  %}
             <img src="{{ p.images.url }}" class="album-img" onclick="currentSlide({{ p.id }})">
+            {{ p.id }}
             {% endfor %}
         </aside>
         <div class="photo-description">
