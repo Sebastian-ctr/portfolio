@@ -64,4 +64,4 @@ def music_detail(request, id):
     context = {
         'music':music
     }
-    return render(request, 'music_detail', context)
+    return render(request, 'music_detail.html', context)
