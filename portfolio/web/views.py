@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Photo, PhotoImage, Home_photo, Film
+from .models import Photo, PhotoImage, Home_photo, Film, Music
 
 # Create your views here.
 def home(request):
@@ -50,3 +50,18 @@ def films_detail(request, id):
         'film':film
     }
     return render(request, 'films_detail.html', context)
+
+
+def music(request):
+    music = Music.objects.all()
+    context = {
+        'music': music
+    }
+    return render(request, 'music.html', context)
+
+def music_detail(request, id):
+    music = get_object_or_404(Music, id=id)
+    context = {
+        'music':music
+    }
+    return render(request, 'music_detail', context)

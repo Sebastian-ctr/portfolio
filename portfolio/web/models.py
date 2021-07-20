@@ -33,5 +33,13 @@ class Film(models.Model):
     def __str__(self):
         return self.tittle
 
+
+class Music(models.Model):
+    url = models.CharField(max_length=200)
+    tittle = models.TextField()
+
+    def __str__(self):
+        return self.tittle
+
     
     

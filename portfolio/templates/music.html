@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block tittle%}
+Music
+{% endblock %}
+
+{% block content %}
+<div class="films">
+    {% for music in music  %}
+        <a href="{% url 'music_detail' id=music.id %}">
+        <img class="film-img" src="http://img.youtube.com/vi/{{ music.url }}/[10].jpg."
+        class="yt-image"><br>
+        <p>{{ music.tittle }}</p>
+        </a>
+    {% endfor %}
+</div>
+{% endblock content %}
