@@ -7,7 +7,12 @@ function closeNav(){
     document.getElementById("mySidenav").style.width = "0";
   }
 
+
+
 window.onload = function() {
+
+
+
 /* home page slide show*/
 var myIndex = 0;
 carousel();
@@ -23,7 +28,7 @@ function carousel(){
   x[myIndex-1].style.display = "block";
   setTimeout(carousel,5000);
 }
-  /* tittle for photo*/
+/* tittle for photo on home page*/
 
 var myIndexTittle = 0;
 carouselTittle();
@@ -40,9 +45,8 @@ function carouselTittle(){
   z[myIndexTittle-1].style.display = "block";
   setTimeout(carouselTittle, 5000);
 }
-
-
-//modal galeryy
+//modal galeryy for album detail
+/*
 var modal = document.getElementById("myModal");
 
 //var img = document.querySelectorAll(".album-img");
@@ -65,10 +69,14 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() { 
   modal.style.display = "none";
-}
+}*/
+
 //end window onload function
 }
+
+
 //slideshow for album detail
+/*
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -91,4 +99,58 @@ function showSlides(n){
     slides[i].style.display = "none";
   }
   slides[slideIndex-1].style.display = "block";
+}*/
+
+
+//lightbox for album detail
+//open modal
+
+function openModal(){
+  document.getElementById("myModal").style.display = "block";
 }
+
+//Close the Modal
+function closeModal(){
+  document.getElementById("myModal").style.display = "none";
+}
+
+//next/previous controls
+function plusSlides(n){
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n){
+  showSlides(slideIndex = n);
+}
+
+/*
+window.onload = function() {
+  var photo1 = document.getElementById("photo1");
+  photo1.addEventListener("click", openModal());
+    
+  var photo2 = document.getElementById("photo2");
+  photo2.addEventListener("click", openModal());
+}*/
+  
+
+//showSlides for album detail
+function showSlides(n){
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if(n > slides.length){slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i <slides.length; i++){
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+
+
+
+
+

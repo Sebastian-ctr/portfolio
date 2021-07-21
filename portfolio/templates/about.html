@@ -9,50 +9,8 @@ About
 <div class="about-container">
     <hr>
     <div>
-        <p class="about-text"><img src="{% static 'portfolio/photo.jpg' %}" alt="My image" class='image-about'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Sed tempus ullamcorper diam sit amet egestas. 
-        Cras dictum lacus nec magna aliquet auctor. 
-        Pellentesque molestie in nisi in auctor. 
-        Aenean sed nunc in lectus varius malesuada. 
-        Phasellus ut facilisis purus, ac pulvinar sem. 
-        Nam pharetra congue nunc ac iaculis. 
-        Pellentesque pellentesque ut mi eget consectetur. 
-        Duis eu iaculis metus, a congue sapien. 
-        Donec bibendum erat odio, non varius lacus congue non. 
-        Sed pulvinar orci non dignissim sodales. 
-        Ut suscipit libero nisi, at ultricies erat lacinia ac. 
-        Vestibulum vitae porta felis, sed pellentesque purus. 
-        Praesent sed venenatis ipsum, ac lobortis dui. 
-        Pellentesque molestie in nisi in auctor. 
-        Aenean sed nunc in lectus varius malesuada. 
-        Phasellus ut facilisis purus, ac pulvinar sem. 
-        Nam pharetra congue nunc ac iaculis. 
-        Pellentesque pellentesque ut mi eget consectetur. 
-        Duis eu iaculis metus, a congue sapien. vvvv
-        Donec bibendum erat odio, non varius lacus congue non. 
-        Sed pulvinar orci non dignissim sodales. 
-        Ut suscipit libero nisi, at ultricies erat lacinia ac. 
-        Vestibulum vitae porta felis, sed pellentesque purus. 
-        Praesent sed venenatis ipsum, ac lobortis dui. 
-        Pellentesque pellentesque ut mi eget consectetur. 
-        Duis eu iaculis metus, a congue sapien. 
-        Donec bibendum erat odio, non varius lacus congue non. 
-        Sed pulvinar orci non dignissim sodales. 
-        Ut suscipit libero nisi, at ultricies erat lacinia ac. 
-        Vestibulum vitae porta felis, sed pellentesque purus. 
-        Praesent sed venenatis ipsum, ac lobortis dui. 
-        Pellentesque molestie in nisi in auctor. 
-        Aenean sed nunc in lectus varius malesuada. 
-        Phasellus ut facilisis purus, ac pulvinar sem. 
-        Nam pharetra congue nunc ac iaculis. 
-        Pellentesque pellentesque ut mi eget consectetur. 
-        Duis eu iaculis metus, a congue sapien. vvvv
-        Donec bibendum erat odio, non varius lacus congue non. 
-        Sed pulvinar orci non dignissim sodales. 
-        Ut suscipit libero nisi, at ultricies erat lacinia ac. 
-        Vestibulum vitae porta felis, sed pellentesque purus. 
-        Praesent sed venenatis ipsum, ac lobortis dui. 
+        <p class="about-text"><img src="{{ about.image.url }}" alt="My image" class='image-about'>
+        {{ about.content }}
         </p>
     </div>
 

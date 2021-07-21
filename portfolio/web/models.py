@@ -12,10 +12,7 @@ class Home_photo(models.Model):
 class About(models.Model):
     content = models.TextField(default=None)
     image = models.FileField(upload_to='media_cdn', default=None)
-
-    def __str__(self):
-        return self.tittle
-    
+   
 
 
 class Photo(models.Model):
@@ -61,6 +58,10 @@ class Publication(models.Model):
 
     def __str__(self):
         return self.tittle
+
+
+class Contact(models.Model):
+    pass
 
     
     

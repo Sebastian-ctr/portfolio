@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Photo, PhotoImage, Home_photo, Film, Music
+from .models import Photo, PhotoImage, Home_photo, Film, Music, About
 
 # Create your views here.
 def home(request):
@@ -21,7 +21,11 @@ def press(request):
     return render(request, 'press.html')
 
 def about(request):
-    return render(request, 'about.html')
+    about = About.objects.first()
+    context = {
+        'about':about
+    }
+    return render(request, 'about.html', context)
 
 
 def contact(request):
