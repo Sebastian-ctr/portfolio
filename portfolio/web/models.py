@@ -19,6 +19,7 @@ class Photo(models.Model):
     tittle = models.CharField(max_length=250)
     description = models.TextField()
     image = models.FileField(blank=True)
+    
 
     def __str__(self):
         return self.tittle
