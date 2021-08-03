@@ -124,4 +124,8 @@ def publications(request):
     return render(request, 'publications.html', context)
 
 def publications_detail(request, id):
-    pass
+    publications = get_object_or_404(Publication, id=id)
+    context = {
+        'publication':publications
+    }
+    return render(request, 'publications_detail.html', context)

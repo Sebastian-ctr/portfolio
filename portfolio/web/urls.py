@@ -14,5 +14,5 @@ urlpatterns = [
     path('music/', views.music, name='music'), 
     path('music/<int:id>/', views.music_detail, name='music_detail'),
     path('publications/', views.publications, name='publications'),
-    #path('publications/<int:id>/', views.publications_detail, name='publications_detail'),   
+    path('publications/<int:id>/', views.publications_detail, name='publications_detail'),   
 ]

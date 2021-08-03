@@ -7,6 +7,11 @@ Publications
 
 {% block content %}
 <div>
-
+    {{ publication.tittle }}<br>
+    {{  publication.text }}<br>
+    {% if publication.image %}
+        {{ publication.image.url }}<br>
+    {% endif %}
+    <a href="{{ publication.link }}">{{ publication.link }}</a>
 </div>
 {% endblock content %}

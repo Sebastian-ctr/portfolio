@@ -56,7 +56,7 @@ class Text(models.Model):
 class Publication(models.Model):
     tittle = models.CharField(max_length=200)
     text = models.TextField()
-    image = models.FileField(upload_to='media_cdn', default=None, blank=True)
+    image = models.FileField(upload_to='media_cdn', default=False, blank=True)
     link = models.CharField(max_length=200, blank=True)
     data = models.DateTimeField(auto_now=False, auto_now_add=True)
 
@@ -69,6 +69,10 @@ class Contact(models.Model):
     name = models.CharField(max_length=100, blank=True)
     email = models.EmailField(max_length=254, null=True)
     phone_nubmer = models.IntegerField(null=True)
+
+    def __str__(self):
+        return self.name
+    
  
     
     

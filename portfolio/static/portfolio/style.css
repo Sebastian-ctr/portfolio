@@ -320,10 +320,31 @@ img.hover-shadow {
 
 /*pagination set*/
 .pagination{
+  position: flex;
+  left: 10px;
+  bottom: 10px;
   display: flexbox;
   justify-content: center;
 }
 
+
+/* contact page */
+.contact-main{
+  margin-top: 15%;
+}
+.contact-container{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 250px 250px 250px;
+  justify-content: center;
+  justify-items: center;
+
+  line-height: 1.6;
+}
+#contact1{
+  grid-column-start: 2;
+}
 /* mobile version  */
 @media (max-width:767px){
     .base{

@@ -6,17 +6,17 @@ Contact
 {% endblock %}
 
 {% block content %}
-<div>
+<div class="contact-main">
     <hr>
-        <div>
-            <adress>
+        <div class="contact-container">
             {% for contact in contact%}
-                <h4>{{ contact.tittle }}</h4><br>
+            <div id="contact1">
+                {{ contact.tittle }}<br>
                 {{ contact.name }}<br>
-                {{ contact.email }}<br>
+                <b>{{ contact.email }}<b><br>
                 {{ contact.phone_number }}
+            </div>
             {% endfor %}
-            </adress>
         </div>
     <hr>
 </div>
