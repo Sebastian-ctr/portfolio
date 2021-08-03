@@ -1,6 +1,6 @@
 from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404
-from .models import Photo, PhotoImage, Home_photo, Film, Music, About, Text, Publication
+from .models import Photo, PhotoImage, Home_photo, Film, Music, About, Text, Publication, Contact
 
 # Create your views here.
 def home(request):
@@ -55,7 +55,11 @@ def about(request):
 
 
 def contact(request):
-    return render(request, 'contact.html')
+    contact = Contact.objects.all()
+    context = {
+        'contact':contact
+    }
+    return render(request, 'contact.html', context)
 
 
 def photos_detail(request, id):

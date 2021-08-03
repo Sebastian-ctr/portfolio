@@ -65,7 +65,10 @@ class Publication(models.Model):
 
 
 class Contact(models.Model):
-    pass
-
+    tittle = models.CharField(max_length=50, blank=True)
+    name = models.CharField(max_length=100, blank=True)
+    email = models.EmailField(max_length=254, null=True)
+    phone_nubmer = models.IntegerField(null=True)
+ 
     
     

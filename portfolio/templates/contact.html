@@ -10,8 +10,12 @@ Contact
     <hr>
         <div>
             <adress>
-            xxx
-            xxx@gmail.com
+            {% for contact in contact%}
+                <h4>{{ contact.tittle }}</h4><br>
+                {{ contact.name }}<br>
+                {{ contact.email }}<br>
+                {{ contact.phone_number }}
+            {% endfor %}
             </adress>
         </div>
     <hr>
