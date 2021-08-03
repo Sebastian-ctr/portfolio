@@ -47,6 +47,7 @@ class Music(models.Model):
 class Text(models.Model):
     tittle = models.CharField(max_length=200)
     text = models.TextField()
+    pdf = models.FileField(upload_to='media_cdn', default=None, null=True)
     data = models.DateTimeField(auto_now=False, auto_now_add=True)
 
     def __str__(self):
@@ -55,6 +56,8 @@ class Text(models.Model):
 class Publication(models.Model):
     tittle = models.CharField(max_length=200)
     text = models.TextField()
+    image = models.FileField(upload_to='media_cdn', default=None, blank=True)
+    link = models.CharField(max_length=200, blank=True)
     data = models.DateTimeField(auto_now=False, auto_now_add=True)
 
     def __str__(self):

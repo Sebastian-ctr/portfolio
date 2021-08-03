@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+  {% extends 'base.html' %}
 {% load static %}
 
 {% block tittle%}
@@ -11,7 +11,8 @@ Texts
         <!--main film container-->
     
         {% for text in page_obj %}
-        <a href="{% url 'press_detail' id=text.id %}">
+        <!--<a href="{% url 'press_detail' id=text.id %}">-->
+        <a href="{{ text.pdf.url }}" target="_new">
         <div>
             <h3>{{ text.tittle }}</h3>
             <p>{{ text.text|truncatewords:50 }}</p>
@@ -19,7 +20,9 @@ Texts
         </a>
         {% endfor %}
         
-    <div class="pagination">
+       
+</div>
+<div class="pagination">
         <span class="step-links">
             {% if page_obj.has_previous %}
                 <a href="?page=1">&laquo; first</a>
@@ -35,6 +38,5 @@ Texts
                 <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
             {% endif %}
         </span>
-    </div>        
-</div>
+    </div>     
 {% endblock content %}

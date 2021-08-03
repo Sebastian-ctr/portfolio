@@ -1,6 +1,6 @@
 from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404
-from .models import Photo, PhotoImage, Home_photo, Film, Music, About, Text
+from .models import Photo, PhotoImage, Home_photo, Film, Music, About, Text, Publication
 
 # Create your views here.
 def home(request):
@@ -105,3 +105,19 @@ def music_detail(request, id):
         'music':music
     }
     return render(request, 'music_detail.html', context)
+
+
+def publications(request):
+    publication = Publication.objects.all()
+    paginator = Paginator(publication, 6)
+
+    page_number = request.GET.get('page', 1)
+    page_obj = paginator.get_page(page_number)
+    context = {
+        'publication': publication,
+        'page_obj': page_obj,
+    }
+    return render(request, 'publications.html', context)
+
+def publications_detail(request, id):
+    pass

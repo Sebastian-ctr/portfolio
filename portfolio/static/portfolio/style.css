@@ -1,5 +1,14 @@
+body{
+  font-family: 'Brygada 1918', sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
 .base{
     padding: 20px;
+
 }
 
 
@@ -110,21 +119,25 @@ footer{
 }
 /* album details*/
 
-
+.album{
+  margin-top: 40px;
+}
 .album-tittle{
     width: 50%;
     margin: auto;
+    text-align: center;
 }
 
 
 .album-descriptions{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .album-img{
     width: 100%;
-    max-width: 100px;
+    max-width: 150px;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
@@ -132,14 +145,18 @@ footer{
 
 .album-photos{
     display: grid;
-    grid-template-columns: 100px 100px 100px;
+    grid-template-columns: 150px 150px 150px;
     grid-gap: 10px;
     padding-right: 20px;
-    /*float: left;*/
+    padding-top: 20px;
+    float: left;
+    margin-left: 40px;
 }
 
 .photo-description{
-   width: 700px;
+   width: 500px;
+   float: right;
+   margin-right: 40px;
 }
 /* films */
 
@@ -173,6 +190,7 @@ footer{
 /* The Modal (background) */
 .modal {
   display: none;
+  justify-content: center;
   position: fixed;
   z-index: 1;
   padding-top: 100px;
@@ -187,11 +205,14 @@ footer{
 /* Modal Content */
 .modal-content {
   position: relative;
-  background-color: #fefefe00;
-  margin: auto;
+  background-color: #00000000;
+  margin: 0 auto;
   padding: 0;
-  width: 90%;
-  max-width: 1200px;
+  /*width: 70%;
+  max-width: 1200px;*/
+  max-height: 700px;
+  height: 100%;
+  
 }
 
 /* The Close Button */
@@ -213,6 +234,19 @@ footer{
 
 .mySlides {
   display: none;
+  position: relative;
+  margin: auto;
+  background-color: #00000034;
+  padding: 0;
+  width:50%;
+  /*max-width: 1200px;*/
+  height: 100%;
+  max-height: 500px;
+}
+
+.img-lightbox{
+  width: 100%;
+  max-width: 900px;
 }
 
 .cursor {
@@ -278,6 +312,17 @@ img.hover-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+
+/*press*/
+
+
+/*press_detail*/
+
+/*pagination set*/
+.pagination{
+  display: flexbox;
+  justify-content: center;
+}
 
 /* mobile version  */
 @media (max-width:767px){

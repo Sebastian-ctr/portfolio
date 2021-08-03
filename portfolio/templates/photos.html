@@ -18,7 +18,9 @@ Photos
             {{ album.tittle }}
         </aside>
         {% endfor %}
-        <div class="pagination">
+        
+    </div>
+    <div class="pagination">
             <span class="step-links">
                 {% if page_obj.has_previous %}
                     <a href="?page=1">&laquo; first</a>
@@ -35,8 +37,6 @@ Photos
                 {% endif %}
             </span>
         </div>
-        
-    </div>
     <footer>
     <p> author : xxx</p>
     </footer>

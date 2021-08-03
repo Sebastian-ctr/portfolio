@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'portfolio/style.css'%}">
+    <link href='http://fonts.googleapis.com/css?family=Brygada+1918&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <title>
         {% block tittle%}
         {% endblock %}
@@ -28,7 +29,7 @@
                 <a href="{% url 'music' %}" class="music-link">Music</a>
                 
                 <a href="{% url 'press' %}" class="texts-link">Texts</a> 
-                <a href="#" class="publications-link">Publications</a>
+                <a href="{% url 'publications' %}" class="publications-link">Publications</a>
                 <a href="{% url 'about' %}" class="about-link">About</a>
                 <a href="{% url 'contact' %}" class="contact-link">Contact</a>
                 
