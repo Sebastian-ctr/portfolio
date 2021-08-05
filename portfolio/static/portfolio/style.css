@@ -422,4 +422,31 @@ img.hover-shadow {
     footer{
         width: 50%;
     }
+
+    /*nav bar*/
+    .author{
+      right:10px;
+      margin-right: 0px;
+      padding-bottom: 10px;
+      padding-right: 0px;
+    }
+
+    .sidenav a {
+      padding-top: 10px;
+    }
+
+    /*album detail*/
+    .album-photos{
+      grid-template-columns: 120px 120px;
+      justify-content: center;
+      margin: auto;
+      padding: 0px;
+      float: none;
+    }
+    .photo-descriptions{
+      width: 100px;
+      float: none;
+      display: flex;
+      justify-self: center;
+    }
 }
