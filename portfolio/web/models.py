@@ -12,6 +12,11 @@ class Home_photo(models.Model):
 class About(models.Model):
     content = models.TextField(default=None)
     image = models.FileField(upload_to='media_cdn', default=None)
+
+
+    def __str__(self):
+        return ("opis")
+    
    
 
 
@@ -56,7 +61,7 @@ class Text(models.Model):
 class Publication(models.Model):
     tittle = models.CharField(max_length=200)
     text = models.TextField()
-    image = models.FileField(upload_to='media_cdn', default=False, blank=True)
+    image = models.FileField(upload_to='media_cdn', default=None, blank=True)
     link = models.CharField(max_length=200, blank=True)
     data = models.DateTimeField(auto_now=False, auto_now_add=True)
 

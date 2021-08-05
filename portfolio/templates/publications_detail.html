@@ -6,12 +6,21 @@ Publications
 {% endblock %}
 
 {% block content %}
-<div>
-    {{ publication.tittle }}<br>
-    {{  publication.text }}<br>
-    {% if publication.image %}
-        {{ publication.image.url }}<br>
-    {% endif %}
+
+<div class="publications-main">
+    <h1 id="publ-tittle">{{ publication.tittle }}</h1><br>
+    <hr>
+    <section class="publication-content">
+        <div class="publication-text">
+            {{  publication.text}}
+        </div>
+        <aside>
+            {% if publication.image %}
+                <img id="publ-img" src="{{ publication.image.url }}"/><br>
+            {% endif %}
+        </aside>
+    </section>
     <a href="{{ publication.link }}">{{ publication.link }}</a>
 </div>
+<hr>
 {% endblock content %}

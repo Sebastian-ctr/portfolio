@@ -25,10 +25,13 @@ a{
 }
 
 .image-about{
-    max-height: 600px;
-    display: block;
-    float: right;
-    margin-left: 25px;
+    max-width: 600px;
+}
+
+#div-about-img{
+  height: 150px;
+  padding-top: 50px;
+  padding-left: 20px;
 }
 
 .image-home-tittle{
@@ -105,18 +108,24 @@ footer{
 
   
   
-
-
+#about{
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
 
 .about-container{
-    margin: 30px;
+  display: flex;
+  margin: 30px;
 }
 
 .about-text{
-    width: 1000px;
+    /*width: 500px;*/
     margin: auto;
     padding-top: 40px;
 }
+
+
 /* album details*/
 
 .album{
@@ -169,6 +178,7 @@ footer{
 }
 .yt-image{
   width: 500px;
+  justify-items: center;
 }
 /* films detail */
 .films-detail, .films-tittle{
@@ -345,6 +355,28 @@ img.hover-shadow {
 #contact1{
   grid-column-start: 2;
 }
+
+.publications-main{
+  margin: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+#publ-tittle{
+  text-align: center;
+}
+
+.publication-content{
+  display: flex;
+}
+
+.publication-text{
+  padding: 20px;
+}
+
+#publ-img{
+  max-width: 400px;
+}
+
 /* mobile version  */
 @media (max-width:767px){
     .base{

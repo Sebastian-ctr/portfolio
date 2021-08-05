@@ -6,13 +6,17 @@ About
 {% endblock %}
 
 {% block content %}
-<div class="about-container">
+<div id="about">
     <hr>
-    <div>
-        <p class="about-text"><img src="{{ about.image.url }}" alt="My image" class='image-about'>
-        {{ about.content }}
-        </p>
-    </div>
-
+    <section class="about-container">
+        <div>
+            <p class="about-text">
+            {{ about.content }}
+            </p>
+        </div>
+        <aside id="div-about-img">
+            <img src="{{ about.image.url }}">
+        </aside>
+    </section>
 </div>
 {% endblock %}
