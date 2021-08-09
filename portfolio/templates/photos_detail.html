@@ -18,7 +18,7 @@ Photos
             <!--<img  src="{{ photo.image.url }}" id="photo1" class="album-img" onclick="openModal();currentSlide(0)">-->
             {% for p in photos  %}
                 <img src="{{ p.images.url }}" id="photo2" class="album-img" onclick="openModal();currentSlide({{ p.id }})">
-                {{ p }}
+                {{ p.id }}
             {% endfor %}
         </aside>
         <aside class="photo-description">
