@@ -69,7 +69,9 @@ function plusSlides(n){
 
 function currentSlide(n){
   showSlides(slideIndex = n);
+  console.log('n = ' + n);
 }
+
 
 
 //showSlides for album detail

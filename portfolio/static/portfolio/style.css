@@ -443,10 +443,26 @@ img.hover-shadow {
       padding: 0px;
       float: none;
     }
-    .photo-descriptions{
-      width: 100px;
+    .photo-description{
+      width: 200px;
+      padding-top: 20px;
+      text-align: left;
       float: none;
       display: flex;
+      justify-self: center;
+    }
+
+    .mySlides{
+      max-height: 200px;
+      justify-items: center;
+    }
+    #modal-for-img{
+      position: absolute;
+      top: 25%;
+    }
+
+    /*music*/
+    .music-tittle{
       justify-self: center;
     }
 }

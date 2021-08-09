@@ -11,7 +11,9 @@ Music
         <a href="{% url 'music_detail' id=music.id %}">
         <img class="film-img" src="http://img.youtube.com/vi/{{ music.url }}/[10].jpg."
         class="yt-image"><br>
-        <p>{{ music.tittle }}</p>
+        <div class="music-tittle">
+            <p>{{ music.tittle }}</p>
+        </div>
         </a>
     {% endfor %}
 </div>

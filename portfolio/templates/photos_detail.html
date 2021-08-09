@@ -18,6 +18,7 @@ Photos
             <!--<img  src="{{ photo.image.url }}" id="photo1" class="album-img" onclick="openModal();currentSlide(0)">-->
             {% for p in photos  %}
                 <img src="{{ p.images.url }}" id="photo2" class="album-img" onclick="openModal();currentSlide({{ p.id }})">
+                {{ p }}
             {% endfor %}
         </aside>
         <aside class="photo-description">
@@ -28,7 +29,7 @@ Photos
 <!-- The Modal -->
 <div id="myModal" class="modal">
   <span class="close" onclick="closeModal()">&times;</span>
-  <div>
+  <div id="modal-for-img">
     <!--<img class="modal-content" id="img01">-->
     <!--<div class="mySlides">
         <img class="img-lightbox" src="{{ photo.image.url }}">
